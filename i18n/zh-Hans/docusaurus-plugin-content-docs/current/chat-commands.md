@@ -136,3 +136,5 @@ Telegram 风格的 `/command@botname` 也会被解析为对应命令。
 `picoclaw onboard` · `picoclaw agent` · `picoclaw auth` · `picoclaw gateway` · `picoclaw status` · `picoclaw cron` · `picoclaw mcp` · `picoclaw migrate` · `picoclaw skills` · `picoclaw model` · `picoclaw update` · `picoclaw version`
 
 这些 CLI 命令与聊天命令是两套入口：CLI 通过终端执行，聊天命令通过 Telegram/Feishu/微信等 channel 消息触发。
+
+CLI 命令的详细文档请参阅 [CLI 命令与参数](/docs/configuration/cli-parameters)。

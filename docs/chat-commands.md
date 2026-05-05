@@ -136,3 +136,5 @@ Besides chat slash commands, the `picoclaw` binary also provides Cobra CLI subco
 `picoclaw onboard` · `picoclaw agent` · `picoclaw auth` · `picoclaw gateway` · `picoclaw status` · `picoclaw cron` · `picoclaw mcp` · `picoclaw migrate` · `picoclaw skills` · `picoclaw model` · `picoclaw update` · `picoclaw version`
 
 These CLI commands and chat commands are separate entry points: CLI commands run in the terminal, while chat commands are triggered through channel messages such as Telegram, Feishu, WeChat, etc.
+
+For detailed CLI command documentation, see [CLI Commands and Parameters](/docs/configuration/cli-parameters).

@@ -136,3 +136,5 @@ Além dos comandos slash de chat, o binário `picoclaw` também oferece subcoman
 `picoclaw onboard` · `picoclaw agent` · `picoclaw auth` · `picoclaw gateway` · `picoclaw status` · `picoclaw cron` · `picoclaw mcp` · `picoclaw migrate` · `picoclaw skills` · `picoclaw model` · `picoclaw update` · `picoclaw version`
 
 Esses comandos CLI e comandos de chat são pontos de entrada separados: comandos CLI são executados no terminal, enquanto comandos de chat são acionados por mensagens de canais como Telegram, Feishu, WeChat, etc.
+
+Para documentação detalhada dos comandos CLI, veja [Comandos e Parâmetros CLI](/docs/configuration/cli-parameters).
