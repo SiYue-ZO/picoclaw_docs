@@ -7,6 +7,8 @@ title: 在 LicheeRV Nano 上部署
 
 本文档将指导您在 Sipeed LicheeRV Nano 开发板上部署 PicoClaw。
 
+![rvnano](/img/rvnano/rvnano.webp)
+
 LicheeRV Nano 是一款超微型开发板（尺寸仅为 22.86 × 35.56 mm），搭载算能 SG2002 处理器（包含 1 GHz 可选 RISC-V/ARM 大核与 700 MHz RISC-V 小核），并内置 256MB DDR3 内存与 1 TOPS 算力的 NPU。此外，它板载了 MIPI-CSI、MIPI-DSI、SDIO、ETH、USB、SPI、UART 及 I2C 等丰富接口，能够满足多样化的应用扩展需求。其直插与半孔兼容设计，也非常便于后期的量产贴片。
 
 LicheeRV Nano 的更多详细信息，请参考 [Sipeed 官方文档](https://wiki.sipeed.com/hardware/zh/lichee/RV_Nano/1_intro.html)。
@@ -45,14 +47,6 @@ cp /root/picoclaw/picoclaw* /usr/bin
 rm -rf /root/picoclaw /root/picoclaw_Linux_riscv64.tar.gz
 ```
 
-## 启动 TUI
-
-安装完成后，您可以直接运行以下命令，使用 PicoClaw 的 TUI（终端用户界面）进行配置和管理：
-
-```bash
-picoclaw-launcher-tui
-```
-
 ## 启动 Web UI
 
 如果您希望使用更直观的图形化界面进行操作，请在终端中运行以下命令以启动 Web 服务：
@@ -68,3 +62,24 @@ http://<设备IP>:18800
 ```
 
 > **提示**：请将 `<设备IP>` 替换为您 LicheeRV Nano 实际分配到的局域网 IP 地址。
+
+## RV Claw
+
+![rvclaw](/img/rvnano/rvclaw.jpeg)
+
+RV Claw 基于 LicheeRV Nano 开发板，搭载了专为 PicoClaw 交互应用打造的功能扩展板，面向语音交互与本地显示场景，集成显示、按键、指示灯、电池管理与音频外设接口，便于快速搭建完整的人机交互终端。
+
+### 定制镜像
+
+Sipeed 为 RV Claw 提供了开箱即用的定制镜像。
+
+RV Claw 定制镜像下载：
+[下载地址](https://github.com/sipeed/rvclaw/releases/latest)
+
+文件：picoclaw-rv-nano-YYYYMMDD.img.xz
+
+- 烧录方式：可使用 balenaEtcher 直接将镜像烧录进 SD 卡；也可先解压 `.xz` 文件后，使用 `dd` 命令进行烧录。
+
+- 镜像内扩展板功能代码基于 Python，位于 `/opt/app_picoclaw`（[源码](https://github.com/sipeed/rvclaw)），便于按需二次开发和自定义。
+
+RV Claw 的更多详细信息，请参考 [Sipeed 官方文档](https://wiki.sipeed.com/hardware/zh/lichee/RV_Nano/7_picoclaw_board.html)。
